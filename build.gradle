@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.7
+
+group = 'pkStudio'
+version = '0.0'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'GenericDao', 'Implementation-Version': version
+    }
+}
+
+repositories {
+	mavenCentral()
+}
+
+install {
+    repositories {
+        mavenDeployer {
+            pom.artifactId = 'genericDao'
+        }
+    }
+}
