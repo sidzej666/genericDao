@@ -24,3 +24,7 @@ install {
         }
     }
 }
+
+dependencies {
+	
+}
